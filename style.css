@@ -33,6 +33,15 @@ header a{
     color: #eee;
     margin-right: 40px;
 }
+.menu-icon div {
+    width: 18px;
+    height: 1px; /* Espessura menor */
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 7px;
+}
 
 /* carousel */
 .carousel{
