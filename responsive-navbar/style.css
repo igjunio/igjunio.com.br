@@ -4,19 +4,21 @@
 }
 
 .menu-icon {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   cursor: pointer;
   margin: 10px;
 }
 
 .menu-icon div {
-  width: 35px;
-  height: 3px; /* Espessura menor */
+  width: 18px;
+  height: 1px; /* Espessura menor */
   background-color: black;
   margin: 6px 0;
   transition: 0.4s;
-  border-radius: 5px; /* Bordas arredondadas */
-  margin-bottom: 11px;
+  border-radius: 10px; /* Bordas arredondadas */
+  margin-bottom: 7px;
 }
 
 .change .bar1 {
@@ -28,15 +30,23 @@
 }
 
 .mobile-menu {
-  display: none;
+  display: block;
   position: absolute;
   top: 60px;
   left: 0;
   width: 100%;
-  background-color: #333;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5018382352941176) 100%, rgba(255,255,255,0) 100%);
+  border-radius: 0 0 8px 8px;
+  max-height: 0; /* Escondido por padrão */
+  overflow: hidden; /* Para ocultar o conteúdo quando fechado */
+  transition: max-height 0.2s ease-out; /* Transição suave de altura */
 }
 
 .mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   list-style-type: none;
   padding: 0;
 }
@@ -44,6 +54,7 @@
 .mobile-menu ul li {
   text-align: center;
   padding: 10px 0;
+  margin-right: 6px;
 }
 
 .mobile-menu ul li a {
@@ -53,5 +64,6 @@
 }
 
 .mobile-menu.show {
-  display: block;
+  max-height: 500px; /* Altura suficiente para acomodar os links */
+  transition: max-height 0.5s ease-in; /* Efeito suave de drop down */
 }
