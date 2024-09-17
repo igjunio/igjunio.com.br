@@ -1,20 +1,22 @@
 /* Fonts */
-:root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-primary: "Montserrat", sans-serif;
-  --font-secondary: "Poppins", sans-serif;
-  --font-terciary: "cannonSCblack", sans-serif;
-  --font-quaternary: "cannonSC", sans-serif;
+@font-face {
+  font-family:'Montserrat-Black';
+  src: url(../font/static/Montserrat-Black.ttf);
 }
 
 @font-face {
-  font-family:'cannonSCblack';
-  src: url(../fontes/cannon-sc-black.otf);
+  font-family:'Montserrat-Regular';
+  src: url(../font/static/Montserrat-Regular.ttf);
 }
 
 @font-face {
-  font-family:'cannonSC';
-  src: url(../fontes/cannon-sc-regular.otf);
+  font-family:'Montserrat-Light';
+  src: url(../font/static/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family:'Montserrat-Thin';
+  src: url(../font/static/Montserrat-Thin.ttf);
 }
 
 /* Colors */
@@ -23,7 +25,7 @@
   --color-primary: #000;
   --color-secondary: grey;
   --background-color: rgb(255,255,255);
-  --background-gradiend: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%);
+  --background-gradiend: linear-gradient(180deg, rgba(255,255,255,0.5039164490861618) 0%, rgba(255,255,255,0.4986945169712794) 50%, rgba(255,255,255,0.5039164490861618) 100%); 
 }
 
 .dark-mode:root {
@@ -31,7 +33,7 @@
   --color-primary: #fff;
   --color-secondary: grey;
   --background-color: rgb(0,0,0);
-  --background-gradiend: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+  --background-gradiend: linear-gradient(180deg, rgba(0,0,0,0.5039164490861618) 0%, rgba(0,0,0,0.4986945169712794) 50%, rgba(0,0,0,0.5039164490861618) 100%);
 }
 
 /* ### GERAL */
@@ -88,7 +90,7 @@
 
 .fa-moon,
 .fa-sun {
-  color: var(--color-secondary);
+  color: var(--color-default);
 }
 
 .fa-moon{
@@ -106,12 +108,14 @@ header{
   flex-direction: row;
   justify-content: space-between;
   position: relative;
+  align-items: center;
+  padding: 0 30px 0 30px;
   z-index: 100;
   background-color: var(--color-default);
 }
 
 .header-logo a img{
-  width: 50px;
+  width: 80px;
 }
 
 .menu-icon {
@@ -123,13 +127,13 @@ header{
 }
 
 .menu-icon div {
-  width: 18px;
-  height: 1px; /* Espessura menor */
+  width: 25px;
+  height: 2px; /* Espessura menor */
   background-color: var(--color-primary);
   margin: 6px 0;
   transition: 0.4s;
   border-radius: 10px; /* Bordas arredondadas */
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
 .change .bar1 {
@@ -143,7 +147,7 @@ header{
 .mobile-menu {
   display: block;
   position: fixed;
-  top: 48px;
+  top: 60px;
   left: 0;
   width: 100%;
   height: 0;
@@ -156,33 +160,42 @@ header{
 .mobile-menu ul {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: space-evenly;
   list-style-type: none;
   padding: 0;
 }
 
 .mobile-menu ul li {
   text-align: center;
-  padding: 10px 0;
-  margin-right: 6px;
 }
 
 .mobile-menu ul li a {
   color: var(--color-primary);
   text-decoration: none;
   font-size: 18px;
+  font-family: 'Montserrat-Black';
+}
+
+.mobile-menu .destaque a{
+  background-color: var(--color-primary);
+  color: var(--color-default);
+  border-radius: 25px;
+  padding: 15px;
 }
 
 .mobile-menu.show {
   height: 100%; /* Altura suficiente para acomodar os links */
   transition: height 0.5s ease-in; /* Efeito suave de drop down */
+  display: flex;
+  justify-content: center;
 }
 
 /* ### CARROSEL */
 .carousel{
   height: 100vh;
   margin-top: -50px;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   position: relative;
   z-index: 99;
@@ -217,21 +230,26 @@ header{
   transform: translateX(-50%);
   padding-right: 30%;
   box-sizing: border-box;
-  color: #fff;
-  text-shadow: 0 5px 10px #0004;
+  color: var(--color-primary);
 }
 .carousel .list .item .author{
+  font-family: 'Montserrat-Light';
   font-weight: bold;
   letter-spacing: 10px;
 }
 .carousel .list .item .title,
 .carousel .list .item .topic{
+  font-family: 'Montserrat-Black';
   font-size: 5em;
   font-weight: bold;
   line-height: 1.3em;
 }
-.carousel .list .item .topic{
-  color: #f1683a;
+/* .carousel .list .item .topic{
+  color: var(--color-default);
+} */
+.carousel .list .item .des{
+  font-family: 'Montserrat-Regular';
+  font-size: 15px;
 }
 .carousel .list .item .buttons{
   display: grid;
@@ -242,15 +260,17 @@ header{
 }
 .carousel .list .item .buttons button{
   border: none;
-  background-color: #eee;
+  background-color: var(--color-primary);
+  color: var(--color-default);
   letter-spacing: 3px;
-  font-family: Poppins;
+  font-family: 'Montserrat-Regular';
   font-weight: 500;
 }
 .carousel .list .item .buttons button:nth-child(2){
   background-color: transparent;
-  border: 1px solid #fff;
-  color: #eee;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-weight: bold;
 }
 /* thumbail */
 .thumbnail{
@@ -275,17 +295,23 @@ header{
   border-radius: 20px;
 }
 .thumbnail .item .content{
-  color: #fff;
+  color: var(--color-primary);
+  background: var(--background-color);
+  background: var(--background-gradiend);
   position: absolute;
   bottom: 10px;
   left: 10px;
   right: 10px;
+  text-align: center;
+  border-radius: 20px;
 }
 .thumbnail .item .content .title{
-  font-weight: 500;
+  font-family: 'Montserrat-Black';
+  font-size: 14px;
 }
 .thumbnail .item .content .description{
-  font-weight: 300;
+  font-family: 'Montserrat-Regular';
+  font-size: 14px;
 }
 /* arrows */
 .arrows{
@@ -303,16 +329,16 @@ header{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--color-secondary);
+  background-color: var(--color-default);
   border: none;
-  color: var(--color-default);
+  color: var(--color-primary);
   font-family: monospace;
   font-weight: bold;
   transition: .5s;
 }
 .arrows button:hover{
-  background-color: var(--color-default);
-  color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-default);
 }
 
 /* animation */
