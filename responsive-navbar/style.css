@@ -105,10 +105,9 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 10px 0 10px;
-  border-bottom: solid 1px var(--color-primary);
   position: relative;
   z-index: 100;
+  background-color: var(--color-default);
 }
 
 .header-logo a img{
@@ -143,17 +142,14 @@ header{
 
 .mobile-menu {
   display: block;
-  position: absolute;
-  top: 50px;
+  position: fixed;
+  top: 48px;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 0 0 8px 8px;
-  max-height: 0; /* Escondido por padrão */
+  height: 0;
+  background-color: var(--color-default);
   overflow: hidden; /* Para ocultar o conteúdo quando fechado */
-  transition: max-height 0.2s ease-out; /* Transição suave de altura */
+  transition: height 0.5s ease-out; /* Transição suave de altura */
   z-index: 100;
 }
 
@@ -172,14 +168,14 @@ header{
 }
 
 .mobile-menu ul li a {
-  color: 000;
+  color: var(--color-primary);
   text-decoration: none;
   font-size: 18px;
 }
 
 .mobile-menu.show {
-  max-height: 500px; /* Altura suficiente para acomodar os links */
-  transition: max-height 0.5s ease-in; /* Efeito suave de drop down */
+  height: 100%; /* Altura suficiente para acomodar os links */
+  transition: height 0.5s ease-in; /* Efeito suave de drop down */
 }
 
 /* ### CARROSEL */
@@ -189,6 +185,7 @@ header{
   width: 100vw;
   overflow: hidden;
   position: relative;
+  z-index: 99;
 }
 .carousel .list .item{
   width: 100%;
@@ -306,16 +303,16 @@ header{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #eee4;
+  background-color: var(--color-secondary);
   border: none;
-  color: #fff;
+  color: var(--color-default);
   font-family: monospace;
   font-weight: bold;
   transition: .5s;
 }
 .arrows button:hover{
-  background-color: #fff;
-  color: #000;
+  background-color: var(--color-default);
+  color: var(--color-primary);
 }
 
 /* animation */
