@@ -474,7 +474,7 @@ header{
       opacity: 0;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 480px) {
   .carousel .list .item .content{
       padding-right: 0;
   }
