@@ -101,6 +101,16 @@ h6 {
   font-family: var(--heading-font);
 }
 
+hr {
+  border: 0;
+  background-color: var(--color-secondary);
+  width: 7%;
+  height: 3px;
+  border-radius: 20%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
 /* Pulsating Play Button
 ------------------------------*/
 .pulsating-play-btn {
@@ -751,7 +761,8 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: var(--color-primary);
+  color: var(--color-default);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -760,13 +771,12 @@ h6 {
 
 .scroll-top i {
   font-size: 24px;
-  color: var(--contrast-color);
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-  color: var(--contrast-color);
+  border-radius: 50%;
+  color: var(--color-default);
 }
 
 .scroll-top.active {
@@ -829,8 +839,6 @@ section,
   padding: 60px 0;
   scroll-margin-top: 100px;
   overflow: clip;
-  scroll-snap-align: start; /* Faz o snap no início da seção */
-  height: 100vh; /* Cada seção ocupa uma tela inteira */
 }
 
 @media (max-width: 1199px) {
@@ -851,13 +859,13 @@ section,
 }
 
 .section-title h2 {
-  font-family:'Raleway-Bold';
-  font-size: 14px;
-  margin-bottom: 15px;
+  font-family:'Raleway-ExtraBold';
+  font-size: 28px;
+  margin-bottom: 40px;
 }
 
 .section-title h2 span {
-  border: var(--color-primary) 2px solid;
+  border: var(--color-primary) 1px solid;
   padding: 5px;
   border-radius: 10px 5px 10px 5px;
 }
@@ -1104,7 +1112,7 @@ section,
 .about .nav-link.active {
   color: var(--color-primary);
   background: none;
-  border-bottom: 3px solid var(--color-primary);
+  border-bottom: 3px solid var(--color-secondary);
 }
 
 @media (max-width: 575px) {
