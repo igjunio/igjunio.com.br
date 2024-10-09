@@ -103,7 +103,7 @@ h6 {
 
 hr {
   border: 0;
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   width: 7%;
   height: 3px;
   border-radius: 20%;
@@ -111,71 +111,35 @@ hr {
   margin-bottom: 80px;
 }
 
-/* Pulsating Play Button
+/* Linha separadora animada
 ------------------------------*/
-.pulsating-play-btn {
-  width: 94px;
-  height: 94px;
-  background: radial-gradient(var(--accent-color) 50%, color-mix(in srgb, var(--accent-color), transparent 75%) 52%);
-  border-radius: 50%;
-  display: block;
-  position: relative;
+.wave-container {
+  width: 15%; /* Define a largura desejada para a linha */
+  max-width: 600px; /* Limita o tamanho máximo da linha */
+  margin: 0 auto; /* Centraliza a linha horizontalmente */
   overflow: hidden;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
-.pulsating-play-btn:before {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  animation-delay: 0s;
-  animation: pulsate-play-btn 2s;
-  animation-direction: forwards;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps;
-  opacity: 1;
-  border-radius: 50%;
-  border: 5px solid color-mix(in srgb, var(--accent-color), transparent 30%);
-  top: -15%;
-  left: -15%;
-  background: rgba(198, 16, 0, 0);
+.wave {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 3;
+  stroke-linecap: round;
+  animation: waveMove 3s ease-in-out infinite;
 }
 
-.pulsating-play-btn:after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
-  z-index: 100;
-  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.pulsating-play-btn:hover:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
-  width: 0;
-  height: 0;
-  border: none;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
-  z-index: 200;
-  animation: none;
-  border-radius: 0;
-}
-
-.pulsating-play-btn:hover:after {
-  border-left: 15px solid var(--accent-color);
-  transform: scale(20);
+@keyframes waveMove {
+  0% {
+    d: path("M 0 10 Q 40 20 80 10 T 160 10 T 240 10 T 320 10 T 400 10");
+  }
+  50% {
+    d: path("M 0 10 Q 40 0 80 10 T 160 10 T 240 10 T 320 10 T 400 10");
+  }
+  100% {
+    d: path("M 0 10 Q 40 20 80 10 T 160 10 T 240 10 T 320 10 T 400 10");
+  }
 }
 
 @keyframes pulsate-play-btn {
@@ -187,58 +151,6 @@ hr {
   100% {
     transform: scale(1, 1);
     opacity: 0;
-  }
-}
-
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
   }
 }
 
@@ -859,8 +771,8 @@ section,
 }
 
 .section-title h2 {
-  font-family:'Raleway-ExtraBold';
-  font-size: 28px;
+  font-family:'Raleway-Black';
+  font-size: 42px;
   margin-bottom: 40px;
 }
 
@@ -1112,7 +1024,7 @@ section,
 .about .nav-link.active {
   color: var(--color-primary);
   background: none;
-  border-bottom: 3px solid var(--color-secondary);
+  border-bottom: 3px solid var(--color-primary);
 }
 
 @media (max-width: 575px) {
@@ -1122,9 +1034,13 @@ section,
 }
 
 .about .tab-content h4 {
-  font-size: 18px;
+  font-size: 24px;
   margin: 0;
   color: var(--color-primary);
+  font-family:'Raleway-Black';
+  text-decoration: underline;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .about .tab-content p {
@@ -1135,7 +1051,6 @@ section,
 
 .about .tab-content i {
   font-size: 22px;
-  line-height: 0;
   margin-right: 8px;
   color: var(--accent-color);
 }
@@ -1348,8 +1263,8 @@ section,
 }
 
 .features .nav-link {
-  background-color: var(--surface-color);
-  color: var(--color-secondary);
+  background-color: var(--color-default);
+  color: var(--color-primary);
   border: 0;
   padding: 25px 20px;
   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
@@ -1375,15 +1290,15 @@ section,
 }
 
 .features .nav-link:hover {
-  color: var(--accent-color);
+  color: var(--color-primary);
 }
 
 .features .nav-link:hover,
 .features .nav-link.active {
   transition: 0.3s;
-  background: var(--accent-color);
-  color: var(--contrast-color) !important;
-  border-color: var(--accent-color);
+  background: var(--color-primary);
+  color: var(--color-default) !important;
+  border-color: var(--color-primary);
 }
 
 .features .nav-link:hover h4,
