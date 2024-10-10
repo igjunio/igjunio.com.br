@@ -52,7 +52,7 @@
   --color-primary: #000;
   --color-secondary: yellow;
   --background-color: rgb(255,255,255);
-  --background-gradiend: linear-gradient(180deg, rgba(255,255,255,0.5039164490861618) 0%, rgba(255,255,255,0.4986945169712794) 50%, rgba(255,255,255,0.5039164490861618) 100%); 
+  --background-gradiend: linear-gradient(180deg, rgba(255,255,255,0.5039164490861618) 0%, rgba(255,255,255,0.4986945169712794) 50%, rgba(255,255,255,0.5039164490861618) 100%);
 }
 
 .dark-mode:root {
@@ -61,6 +61,14 @@
   --color-secondary: yellow;
   --background-color: rgb(0,0,0);
   --background-gradiend: linear-gradient(180deg, rgba(0,0,0,0.5039164490861618) 0%, rgba(0,0,0,0.4986945169712794) 50%, rgba(0,0,0,0.5039164490861618) 100%);
+}
+
+#logo {
+  filter: invert(0);
+}
+
+.dark-mode  #logo{
+  filter: invert(1);
 }
 
 /* Smooth scroll */
@@ -109,6 +117,21 @@ hr {
   border-radius: 20%;
   margin-top: 80px;
   margin-bottom: 80px;
+}
+
+/* ### DARK MODE */
+
+.theme-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  transition: color 0.5s;
+}
+
+.theme-toggle:focus {
+  outline: none;
 }
 
 /* Linha separadora animada
@@ -160,7 +183,7 @@ hr {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 10px 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -195,8 +218,9 @@ hr {
   font-family:'Raleway-Bold';
   font-size: 14px;
   padding: 8px 26px;
-  margin: 0;
+  margin: 10px 10px;
   border-radius: 20px;
+  align-content: center;
 }
 
 .header .btn-getstarted:hover,
@@ -223,7 +247,7 @@ hr {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 18px var(--color-primary);
 }
 
 /*--------------------------------------------------------------
@@ -768,12 +792,14 @@ section,
   text-align: left;
   padding-bottom: 30px;
   position: relative;
+  color: var(--color-primary);
 }
 
 .section-title h2 {
   font-family:'Raleway-Black';
   font-size: 42px;
   margin-bottom: 40px;
+  color: var(--color-primary);
 }
 
 .section-title h2 span {
@@ -798,6 +824,7 @@ section,
   display: flex;
   align-items: center;
   background-size: cover;
+  margin-top: 60px;
 }
 
 .hero h1 {
@@ -805,6 +832,7 @@ section,
   font-size: 96px;
   font-weight: 300;
   font-family:'Raleway-Black';
+  color: var(--color-primary);
 }
 
 .hero h1 span {
@@ -1052,7 +1080,7 @@ section,
 .about .tab-content i {
   font-size: 22px;
   margin-right: 8px;
-  color: var(--accent-color);
+  color: var(--color-primary);
 }
 
 /*--------------------------------------------------------------
@@ -1173,9 +1201,6 @@ section,
 /*--------------------------------------------------------------
 # Onfocus Section
 --------------------------------------------------------------*/
-.onfocus {
-  padding: 0;
-}
 
 .onfocus .video-play {
   min-height: 400px;
@@ -1184,9 +1209,10 @@ section,
 }
 
 .onfocus .content {
-  background: linear-gradient(color-mix(in srgb, var(--background-color), transparent 90%), color-mix(in srgb, var(--background-color), transparent 75%)), url("../img/onfocus-content-bg.jpg") center center;
+  background: var(--color-primary);
   background-size: cover;
   padding: 40px;
+  color: var(--color-default);
 }
 
 @media (min-width: 768px) {
@@ -1331,6 +1357,8 @@ section,
 
 .features .tab-pane ul li {
   padding-bottom: 10px;
+  font-size: 18px;
+  color: var(--color-primary);
 }
 
 .features .tab-pane ul i {

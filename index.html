@@ -26,14 +26,21 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
+  <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/logo/logo_full_back.svg" alt="">
+        <img src="assets/img/logo/logo_full_back.svg" id="logo" alt="Igor Junio">
       </a>
 
-      <a class="btn-getstarted" href="index.html#about">Fazer meu site</a>
+      <div class="d-flex justify-content-between">
+        <button id="theme-toggle" class="theme-toggle">
+          <!-- Ícone de Lua (inicialmente) -->
+          <i id="theme-icon" class="bi bi-moon"></i>
+        </button>
+
+        <a class="btn-getstarted" href="index.html#about">Fazer meu site</a>
+      </div>
 
     </div>
   </header>
@@ -206,7 +213,7 @@
 
       <!-- Section Title -->
       <div class="container section-title text-center" data-aos="fade-up">
-        <h2>Os melhores benefícios estão aqui</h2>
+        <h2>Mais do que um site. Uma parceria!</h2>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up">
@@ -215,43 +222,43 @@
 
           <li class="nav-item col-6 col-md-4 col-lg-2">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
-              <i class="bi bi-binoculars"></i>
-              <h4>Modinest</h4>
+              <i class="bi bi-infinity"></i>
+              <h4 class="text-center">Revisões ilimitadas</h4>
             </a>
           </li><!-- End Tab 1 Nav -->
 
           <li class="nav-item col-6 col-md-4 col-lg-2">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
-              <i class="bi bi-box-seam"></i>
-              <h4>Undaesenti</h4>
+              <i class="bi bi-house-check"></i>
+              <h4 class="text-center">Hospedagem inclusa</h4>
             </a>
           </li><!-- End Tab 2 Nav -->
 
           <li class="nav-item col-6 col-md-4 col-lg-2">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
-              <i class="bi bi-brightness-high"></i>
-              <h4>Pariatur</h4>
+              <i class="bi bi-globe"></i>
+              <h4 class="text-center">Domínio garantido</h4>
             </a>
           </li><!-- End Tab 3 Nav -->
 
           <li class="nav-item col-6 col-md-4 col-lg-2">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4">
-              <i class="bi bi-command"></i>
-              <h4>Nostrum</h4>
+              <i class="bi bi-buildings"></i>
+              <h4 class="text-center">Foco no seu negócio</h4>
             </a>
           </li><!-- End Tab 4 Nav -->
 
           <li class="nav-item col-6 col-md-4 col-lg-2">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-5">
-              <i class="bi bi-easel"></i>
-              <h4>Adipiscing</h4>
+              <i class="bi bi-cash-coin"></i>
+              <h4 class="text-center">Parcelamento sem juros</h4>
             </a>
           </li><!-- End Tab 5 Nav -->
 
           <li class="nav-item col-6 col-md-4 col-lg-2">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-6">
-              <i class="bi bi-map"></i>
-              <h4>Reprehit</h4>
+              <i class="bi bi-wrench-adjustable-circle"></i>
+              <h4 class="text-center">Suporte continuo</h4>
             </a>
           </li><!-- End Tab 6 Nav -->
 
@@ -261,151 +268,72 @@
 
           <div class="tab-pane fade active show" id="features-tab-1">
             <div class="row gy-4">
-              <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-                <h3>Modinest</h3>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
+              <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Seu site pode crescer junto com o seu negócio, sem custo adicional. A cada nova necessidade, você poderá solicitar revisões, tanto na copy quanto na estrutura ou design.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Não importa quantas mudanças você precise, estou sempre disponível para ajustar o site conforme seu feedback.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Pague uma vez e tenha a liberdade de atualizar seu site sempre que quiser durante o período do contrato.</li>
                 </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-              </div>
-              <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                <img src="assets/img/features-1.svg" alt="" class="img-fluid">
               </div>
             </div>
           </div><!-- End Tab Content 1 -->
 
           <div class="tab-pane fade" id="features-tab-2">
             <div class="row gy-4">
-              <div class="col-lg-8 order-2 order-lg-1">
-                <h3>Undaesenti</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
+              <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Eu cuido de toda a parte técnica, desde a configuração até a manutenção da hospedagem, para que você não precise se preocupar com esses detalhes.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Você terá a segurança de que seu site estará sempre atualizado e funcionando corretamente, sem precisar lidar com questões técnicas.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> A hospedagem está inclusa no pacote, então você não terá despesas adicionais com esse serviço.</li>
                 </ul>
-              </div>
-              <div class="col-lg-4 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-2.svg" alt="" class="img-fluid">
               </div>
             </div>
           </div><!-- End Tab Content 2 -->
 
           <div class="tab-pane fade" id="features-tab-3">
             <div class="row gy-4">
-              <div class="col-lg-8 order-2 order-lg-1">
-                <h3>Pariatur</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
+              <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Se você ainda não tem um domínio, eu cuido da contratação para você, simplificando todo o processo.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Garanto que seu site terá um domínio profissional, refletindo a credibilidade do seu negócio.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Além de configurar o domínio, também faço toda a gestão necessária, garantindo que seu site esteja sempre acessível.</li>
                 </ul>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-              </div>
-              <div class="col-lg-4 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-3.svg" alt="" class="img-fluid">
               </div>
             </div>
           </div><!-- End Tab Content 3 -->
 
           <div class="tab-pane fade" id="features-tab-4">
             <div class="row gy-4">
-              <div class="col-lg-8 order-2 order-lg-1">
-                <h3>Nostrum</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
+              <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Deixe toda a parte técnica e criativa comigo. Assim, você pode se concentrar no que realmente importa: o crescimento da sua empresa.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Com anos de experiência no desenvolvimento de websites, eu garanto que seu site estará em mãos experientes e voltadas a gerar resultados.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Enquanto você se dedica ao que faz de melhor, eu garanto que o site vai funcionar como uma ferramenta poderosa para seu sucesso online.</li>
                 </ul>
-              </div>
-              <div class="col-lg-4 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-4.svg" alt="" class="img-fluid">
               </div>
             </div>
           </div><!-- End Tab Content 4 -->
 
           <div class="tab-pane fade" id="features-tab-5">
             <div class="row gy-4">
-              <div class="col-lg-8 order-2 order-lg-1">
-                <h3>Adipiscing</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
+              <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Invista no seu site sem pesar no bolso. Ofereço parcelamento em até 12x sem juros, para que o custo se ajuste ao seu orçamento.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Você não paga nada a mais pelo parcelamento, o que torna o investimento ainda mais acessível.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Independentemente do tamanho do projeto, há sempre uma forma de pagamento que se adapta à sua realidade.</li>
                 </ul>
-              </div>
-              <div class="col-lg-4 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-5.svg" alt="" class="img-fluid">
               </div>
             </div>
           </div><!-- End Tab Content 5 -->
 
           <div class="tab-pane fade" id="features-tab-6">
             <div class="row gy-4">
-              <div class="col-lg-8 order-2 order-lg-1">
-                <h3>Reprehit</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
+              <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Mesmo após a entrega do site, você continua contando comigo. Relatórios regulares de desempenho, como visitas e disponibilidade, ajudam a acompanhar o sucesso do site.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Se o seu site precisar de ajustes ou atualizações, estarei à disposição, garantindo que ele esteja sempre otimizado.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Não é só uma entrega de site, é o começo de uma parceria onde estou sempre disponível para te apoiar.</li>
                 </ul>
-              </div>
-              <div class="col-lg-4 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-6.svg" alt="" class="img-fluid">
               </div>
             </div>
           </div><!-- End Tab Content 6 -->
@@ -458,14 +386,14 @@
     </div>
 
     <!-- Onfocus Section -->
-    <section id="onfocus" class="onfocus section dark-background">
+    <section id="onfocus" class="onfocus section">
 
       <!-- Section Title -->
       <div class="container section-title text-center" data-aos="fade-up">
-        <h2><span>Porque fazer um Website</span></h2>
+        <h2>Porque fazer um Website</h2>
       </div><!-- End Section Title -->
 
-      <div class="container-fluid p-0" data-aos="fade-up">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
 
         <div class="row g-0">
           <div class="col-lg-6 video-play position-relative">
@@ -602,6 +530,9 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Darkmode JS File -->
+  <script src="assets/js/darkmode.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
