@@ -238,8 +238,8 @@ hr {
   bottom: 15px; /* Fixa o botão na parte inferior da página */
   transform: translateX(-50%); /* Ajusta para que o botão fique realmente no centro */
   z-index: 99999;
-  background-color: var(--color-default);
-  color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-default);
   box-shadow: var(--box-shadow);
   border-radius: 10px;
   transition: all 0.4s;
@@ -250,7 +250,7 @@ hr {
 }
 
 .scroll-top i {
-  color: var(--color-primary);
+  color: var(--color-default);
   font-size: 20px;
   font-weight: bold;
   margin-right: 4px;
@@ -539,13 +539,14 @@ section,
 }
 
 .faq .faq-container {
-  margin-top: 15px;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
 .faq .faq-container .faq-item {
   background-color: var(--color-default);
   position: relative;
-  padding: 15px;
+  padding: 15px 0 15px 0;
   margin-bottom: 2px;
   box-shadow: 0px 5px 25px 0px var(--box-shadow);
   overflow: hidden;
@@ -609,4 +610,23 @@ section,
 
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
+}
+
+/*--------------------------------------------------------------
+# Clients Section
+--------------------------------------------------------------*/
+.clients .swiper {
+  padding: 10px 0;
+}
+
+.clients .swiper-wrapper {
+  height: auto;
+}S
+
+.clients .swiper-slide img {
+  transition: 0.3s;
+}
+
+.clients .swiper-slide img:hover {
+  transform: scale(1.1);
 }
