@@ -112,9 +112,12 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  color: var(--heading-color);
-  font-family: var(--heading-font);
+h6,
+p {
+  font-family: 'Raleway-Regular';
+  padding-bottom: 10px;
+  font-size: 18px;
+  color: var(--color-primary);
 }
 
 hr {
@@ -346,7 +349,7 @@ section,
 .hero h2 {
   font-family:'Raleway-Regular';
   color: var(--color-primary);
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .hero p span {
@@ -616,4 +619,177 @@ section,
 
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
+}
+
+/*--------------------------------------------------------------
+# Blog Posts Section
+--------------------------------------------------------------*/
+.blog-posts article {
+  padding: 20px;
+}
+
+.blog-posts .post-img {
+  max-height: 240px;
+  margin: -30px -30px 15px -30px;
+  overflow: hidden;
+}
+
+.blog-posts .title {
+  font-family: 'Raleway-Regular';
+  font-size: 20px;
+  color: var(--color-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.blog-posts .title a:hover {
+  text-decoration: underline;
+}
+
+.blog-posts .post-date {
+  font-family: 'Raleway-Bold';
+  padding-bottom: 10px;
+  font-size: 16px;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.blog-posts .post-meta {
+  align-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  border-radius: 4px;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: auto;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2px 16px;
+  position: relative;
+  width: auto;
+  will-change: var(--framer-will-change-override, transform);
+  font-family: 'Raleway-SemiBold';
+  font-size: 12px;
+  color: var(--color-default);
+}
+
+/*--------------------------------------------------------------
+# Blog Details Section
+--------------------------------------------------------------*/
+.blog-details {
+  padding-bottom: 30px;
+}
+
+.blog-details .title {
+  font-family: 'Raleway-Black';
+  font-size: 46px;
+  color: var(--color-primary);
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.blog-details .post-date {
+  font-family: 'Raleway-Regular';
+  font-size: 12px;
+  color: var(--color-primary);
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.blog-details .post-meta {
+  font-family: 'Raleway-Regular';
+  font-size: 12px;
+  color: var(--color-default);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.blog-details .post-meta span{
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.blog-details .content,
+.blog-details .content img,
+.blog-details .content p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.blog-details button {
+  background-color: var(--color-primary);
+  color: var(--color-default);
+  width: 100%;
+  border-radius: 10px;
+  font-family: 'Raleway-Bold';
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.blog-details button i{
+  color: var(--color-default);
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.blog-details button:hover{
+  background-color: var(--color-default);
+  color: var(--color-primary);
+  border: solid 1px var(--color-primary);
+}
+
+.blog-details button:hover i{
+  color: var(--color-primary);
+}
+
+.blog-details h6 {
+  font-family:'Raleway-SemiBold';
+  font-size: 10px;
+  color: var(--color-primary);
+  margin-top: 60px;
+  border-bottom: 1px solid var(--color-neutra);
+  padding-bottom: 20px;
+}
+
+.blog-details .post-recomend{
+  padding-top: 40px;
+}
+
+.blog-details .post-recomend .title {
+  font-family: 'Raleway-Regular';
+  font-size: 16px;
+  color: var(--color-primary);
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.blog-details .post-recomend .title:hover {
+  text-decoration: underline;
+}
+
+.blog-details .post-recomend .post-date {
+  font-family: 'Raleway-SemiBold';
+  font-size: 12px;
+  color: var(--color-primary);
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.blog-details .post-recomend .post-meta {
+  font-family: 'Raleway-Regular';
+  font-size: 10px;
+  color: var(--color-default);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.blog-details .post-recomend .post-meta span{
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  padding: 5px;
 }
